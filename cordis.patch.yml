@@ -1,0 +1,5 @@
+# dsh-image-gen —— 文本生成图片工具（OpenAI 兼容 /v1/images/generations）
+# 用法：profile 的 bundles 里加入 dsh-image-gen 即可，本层只插入一行工具条目。
+- insert:
+    - id: image-gen
+      name: dsh-image-gen
