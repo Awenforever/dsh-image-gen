@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.1.1 - 2026-11-16
+
+- Split the pure helpers out into `lib/core.js` so behaviour is testable without
+  any DSH dependency.
+- Add 11 unit tests (`node --test`) and a two-OS GitHub Actions workflow.
+- No behaviour change: the tool still always requests `b64_json`.
+
 ## 0.1.0 - 2026-11-16
 
 - Initial release.

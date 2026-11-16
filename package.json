@@ -1,6 +1,6 @@
 {
   "name": "dsh-image-gen",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Text-to-image generation tool for DSH, backed by an OpenAI-compatible /v1/images/generations endpoint.",
   "type": "module",
   "main": "lib/index.js",
@@ -15,7 +15,8 @@
   "files": [
     "lib",
     "cordis.patch.yml",
-    "README.md"
+    "README.md",
+    "LICENSE"
   ],
   "license": "MIT",
   "keywords": [
@@ -44,5 +45,9 @@
   },
   "bugs": {
     "url": "https://github.com/Awenforever/dsh-image-gen/issues"
+  },
+  "scripts": {
+    "test": "node --test \"test/*.test.mjs\"",
+    "check": "node --check lib/index.js"
   }
 }

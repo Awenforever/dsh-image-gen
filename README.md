@@ -65,3 +65,21 @@ This plugin always asks for base64, so it works regardless of gateway version.
 ## License
 
 MIT
+## Local development
+
+The desktop profile depends on a **stable copy** under `~/.dsh/plugins/dsh-image-gen`,
+not on this checkout, so moving or deleting the checkout cannot break the install.
+
+```powershell
+pwsh -File scripts/deploy-local.ps1          # copy lib/ + manifests to the stable path
+pwsh -File scripts/deploy-local.ps1 -Check   # report drift only, exits 1 on drift
+node --test "test/*.test.mjs"                # unit tests (no dependencies needed)
+```
+
+Run `deploy-local.ps1` after changing `lib/`; the running app picks the new copy up on
+the next profile load.
+
+## CI
+
+`.github/workflows/ci.yml` runs the syntax check and the unit tests on Ubuntu and Windows
+with Node 24.
